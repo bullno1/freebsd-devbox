@@ -11,4 +11,5 @@ Vagrant.configure("2") do |config|
   end
   config.ssh.forward_agent = true
   config.vm.provision "shell", path: "provision.sh", privileged: false
+  config.vm.provision "file", source: "~/.gitconfig", destination: "/home/vagrant/.gitconfig"
 end
