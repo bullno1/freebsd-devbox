@@ -32,4 +32,5 @@ then
 fi
 
 # clangd
+rm -f ~/bin/clangd
 ln -s /usr/local/llvm20/bin/clangd ~/bin
