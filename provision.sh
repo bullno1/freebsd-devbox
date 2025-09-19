@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 # packages
-yes | sudo pkg install llvm20 mold cmake ninja vim git python3 inotify-tools ripgrep
+yes | sudo pkg install llvm20 mold cmake ninja vim git python inotify-tools ripgrep
 
 # dotfiles
 if [ ! -d ~/dotfiles ]
@@ -23,6 +23,7 @@ vim +BundleInstall +qa
 
 # ycm
 YCM_DIR=~/.vim/bundle/YouCompleteMe
+pip install --user watchdog
 if [ ! -f "$YCM_DIR/third_party/ycmd/ycm_core.cpython"* ]
 then
 	cd $YCM_DIR
