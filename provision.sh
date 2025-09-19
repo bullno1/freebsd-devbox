@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 # packages
-yes | sudo pkg install llvm20 mold cmake ninja vim git python inotify-tools ripgrep
+yes | sudo pkg install llvm20 mold cmake ninja vim git python py311-pip inotify-tools ripgrep
 
 # dotfiles
 if [ ! -d ~/dotfiles ]
